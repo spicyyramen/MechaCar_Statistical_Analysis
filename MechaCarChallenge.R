@@ -1,3 +1,4 @@
+### Deliverable 1 ###
 # load dplyr package
 library(dplyr)
 
@@ -9,3 +10,18 @@ lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,data=mec
 
 # generate summary statistics on model
 summary(lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,data=mecha_df))
+
+
+### Deliverable 2 ###
+# read in suspension_coil.csv as a table
+coil_table <- read.csv(file='Suspension_Coil.csv',check.names = F,stringsAsFactors = F)
+
+# create total_summary dataframe using summarize() to generate mean, median, variance, & stdev of PSI
+total_summary <- coil_table %>% 
+  summarize(Mean=mean(PSI), Median=median(PSI),Variance=var(PSI),SD=sd(PSI))
+
+# create lot_summary dataframe using group_by() and summarize()
+# to group each manufact lot by the mean,med,var,& stdev of the coil's PSI column
+lot_summary <- coil_table %>% 
+  group_by(Manufacturing_Lot) %>% 
+  summarise(Mean=mean(PSI), Median=median(PSI),Variance=var(PSI),SD=sd(PSI))
