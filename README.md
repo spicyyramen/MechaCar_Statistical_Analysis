@@ -36,3 +36,10 @@ For all performed T-Tests(sample vs pop, lot1 vs pop, lot2 vs pop, lot3 vs pop) 
 
 ### Lot 3 T-Test Results
 ![Suspension Coil Summary Statistics by Manufacturing Lot](images/lot3_ttest.png)
+
+## Study Design: MechaCar vs Competition
+Another important metric to consider for MechaCar would the the cost of the vehicle compared to the competition. First, you would need consumer data on current car buying prices. Narrow down the list of vehicle prices to be limited to vehicle types that MechaCar also offers(sedan, truck, minivan, etc.).
+
+Once you have the data required, you can take a random sample from each dataset (using sample_n()), and run a two-sample t-test to determine if there is a significant difference in distribution of average cost for MechaCar models vs competition models.
+
+The null hypothesis would be if the difference between MechaCar sample dataset and competition sample dataset is zero (no significant difference in cost). The alternative hypothesis would be if the difference between MechaCar sample data *is not* equal to zero (significant difference in cost). 
