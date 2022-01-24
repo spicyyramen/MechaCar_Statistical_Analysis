@@ -25,3 +25,26 @@ total_summary <- coil_table %>%
 lot_summary <- coil_table %>% 
   group_by(Manufacturing_Lot) %>% 
   summarise(Mean=mean(PSI), Median=median(PSI),Variance=var(PSI),SD=sd(PSI))
+
+### Deliverable 3 ###
+
+# write a script using t.test() to determine if PSI across all manufacturing lots 
+# is statistically different from the population mean of 1500 PSI
+
+# randomly select sample data
+sample_tbl <- coil_table %>% sample_n(50)
+# compare sample data to population data
+t.test(sample_tbl$PSI,coil_table$PSI)
+
+# create tables for each manufacturing lot
+lot1 <- coil_table[coil_table$Manufacturing_Lot=="Lot1",]
+lot2 <- coil_table[coil_table$Manufacturing_Lot=="Lot2",]
+lot3 <- coil_table[coil_table$Manufacturing_Lot=="Lot3",]
+
+# compare each lot to population data
+t.test(lot1$PSI,coil_table$PSI)
+
+t.test(lot2$PSI,coil_table$PSI)
+
+t.test(lot3$PSI,coil_table$PSI)
+
