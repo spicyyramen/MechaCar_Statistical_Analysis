@@ -1,6 +1,7 @@
 # MechaCar_Statistical_Analysis
 
 ## Linear Regression to Predict MPG
+### MechaCar MPG Summary Statistics
 ![MechaCar MPG Stummary Statistics](images/MechaCar_sumstats.png)
 
 - The variables/coefficients that provided a non-random amount of variance to the mpg values in the dataset were: **vehicle length**, **ground clearance**, and **intercept**.
@@ -17,4 +18,4 @@
 
 When looking at the overall suspension coil statistics, it appears that the variance (~62.3) falls just under the maximum allowed variance of 100 lbs per square inch. 
 
-However, if broken down by manufacturing lot it becomes clear that Lots 2 & 3 are well under the maximum allowed variance- whereas Lot 3 was well *above* the allowed variance, skewing the overall data. Lot 3 in particular fails to meet manufacturing specifications as it has a very high variance and standard deviation.
+However, if broken down by manufacturing lot it becomes clear that Lots 1 & 2 are well under the maximum allowed variance- whereas Lot 3 was well *above* the allowed variance, skewing the overall data. Lot 3 in particular fails to meet manufacturing specifications as it has a very high variance and standard deviation.
