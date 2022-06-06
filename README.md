@@ -1,4 +1,11 @@
-# MechaCar_Statistical_Analysis
+# MechaCar Statistical Analysis
+
+## Overview
+The purpose of this analysis is to:
+- Perform multiple linear regression to identify which variables are predictive of MPG for the MechaCar prototypes
+- Collect summary statistics on PSI of suspension coils from various manufacturing lots
+- Run t-tests to determine whether manufacturing lots are consistent statistically with the mean population
+- Design a study to compare performance of the MechaCar against competitors' vehicles
 
 ## Linear Regression to Predict MPG
 ### MechaCar MPG Summary Statistics
